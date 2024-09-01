@@ -1,0 +1,62 @@
+<body>
+  <!-- Header Section -->
+  <header class="page-header">
+    <div class="header-content">
+      <h1>Menu List</h1>
+      <div class="header-actions">
+        <button class="logout-btn">
+          <i class="fa fa-sign-out-alt"></i> Logout
+        </button>
+        <button (click)="changePassword()" class="change-password-btn">
+          <i class="fa fa-key"></i> Change Password
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Main Content Section -->
+  <div class="table-container">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Order</th>
+          <th>Image</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>{{ item.order }}</td>
+          <td>
+            <div class="image-wrapper">
+              <img [src]="item.image" alt="Item Image" class="item-image" />
+            </div>
+          </td>
+          <td>
+            <button class="status-btn" [ngClass]="{'enabled': item.enabled, 'disabled': !item.enabled}">
+              <i class="fa" [ngClass]="item.enabled ? 'fa-check-circle' : 'fa-times-circle'"></i>
+            </button>
+          </td>
+          <td class="actions">
+            <button class="btn edit-btn">
+              <i class="fa fa-pencil-alt"></i>
+            </button>
+            <button class="btn delete-btn">
+              <i class="fa fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Floating Action Button -->
+  <div class="fab-container">
+    <button (click)="addNew()" class="fab-btn">
+      <i class="fa fa-plus"></i>
+    </button>
+  </div>
+  
+  </body>
+  

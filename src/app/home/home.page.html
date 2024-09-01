@@ -1,0 +1,73 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <img src="../../assets/fryday.png" alt="FryDay Logo" class="logo">
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<!-- Red Banner with CSS Animation -->
+<div class="red-banner">
+  <div class="banner-text">
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <span>Order Now!!</span>
+    <!-- Add more spans as needed to fill the space -->
+  </div>
+</div>
+
+
+<ion-content>
+  <div class="main-container">
+    <!-- Enhance the logo with animation and set max-height -->
+    <img src="../../assets/fryday.png" alt="FryDay Logo" class="logo animated-logo">
+
+    <div class="menu-gallery" style="margin-bottom: 60px;">
+      <ion-card class="menu-card" *ngFor="let item of menuItems">
+        <img [src]="item.image" alt="Menu Item" class="menu-image">
+        <div class="menu-overlay">
+          <ion-button class="order-now" expand="full" (click)="orderItem(item)">
+            Order Now
+          </ion-button>
+        </div>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+
+<!-- Floating WhatsApp Button with Ripple Effect -->
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" class="floating-whatsapp-container" (click)="call()">
+  <ion-fab-button color="success">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+    <div class="ripple"></div>
+  </ion-fab-button>
+</ion-fab>
+
+<!-- Floating Call Button with Ripple Effect -->
+<ion-fab vertical="bottom" horizontal="start" slot="fixed" class="floating-call-container" (click)="whatsapp()">
+  <ion-fab-button color="primary">
+    <ion-icon name="call"></ion-icon>
+    <div class="ripple"></div>
+  </ion-fab-button>
+</ion-fab>
